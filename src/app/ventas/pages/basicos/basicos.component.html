@@ -1,0 +1,40 @@
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p>Pipes incluídos en Angular - Usualmente en el Common Module.</p>
+</div>
+
+<p-splitter [style]="{ height: '300px' }">
+    <ng-template pTemplate>
+        <p-card header="uppercase" [subheader]="nombreLower | uppercase">
+            {{ nombreLower | uppercase }}
+        </p-card>
+    </ng-template>
+
+    <ng-template pTemplate>
+        <p-card header="lowercase" [subheader]="nombreLower">
+            {{ nombreLower }}
+        </p-card>
+    </ng-template>
+
+    <ng-template pTemplate>
+        <p-card header="titlecase" [subheader]="nombreCompleto | titlecase">
+            {{ nombreCompleto }}
+        </p-card>
+    </ng-template>
+</p-splitter>
+
+<!-- 
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="uppercase" [subheader]="nombreLower | uppercase">
+            {{ nombreLower | uppercase }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="lowercase" [subheader]="nombreLower">
+            {{ nombreLower }}
+        </p-card>
+    </div>
+    <div class="p-col-4">3</div>
+</div> -->
