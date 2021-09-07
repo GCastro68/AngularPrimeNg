@@ -3,7 +3,7 @@
     <p>Pipes incluídos en Angular - Usualmente en el Common Module.</p>
 </div>
 
-<p-splitter [style]="{ height: '300px' }">
+<p-splitter [style]="{ height: '150px' }">
     <ng-template pTemplate>
         <p-card header="uppercase" [subheader]="nombreLower | uppercase">
             {{ nombreLower | uppercase }}
@@ -23,18 +23,50 @@
     </ng-template>
 </p-splitter>
 
-<!-- 
-<div class="p-grid">
-    <div class="p-col-4">
-        <p-card header="uppercase" [subheader]="nombreLower | uppercase">
-            {{ nombreLower | uppercase }}
-        </p-card>
-    </div>
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>Pipe para mostrar las fechas.</p>
+</div>
 
-    <div class="p-col-4">
-        <p-card header="lowercase" [subheader]="nombreLower">
-            {{ nombreLower }}
+<p-splitter [style]="{ height: '300px' }">
+    <ng-template pTemplate>
+        <p-card>
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date</li>
+                <li>fecha | date: 'short'</li>
+                <li>fecha | date: 'long'</li>
+                <li>fecha | date: 'MMMM'</li>
+                <li>fecha | date: 'dd MMMM, yyyy'</li>
+            </ul>
+
+            <hr />
+            <ul>
+                <li>fecha | date: "long":"GMT-7"</li>
+                <li>fecha | date: "long":"GMT-5"</li>
+                <li>fecha | date: "long":"":"en"</li>
+                <li>fecha | date: "long":"":"fr"</li>
+            </ul>
         </p-card>
-    </div>
-    <div class="p-col-4">3</div>
-</div> -->
+    </ng-template>
+    <ng-template pTemplate>
+        <p-card>
+            <ul>
+                <li>{{ fecha }}</li>
+                <li>{{ fecha | date }}</li>
+                <li>{{ fecha | date: "short" }}</li>
+                <li>{{ fecha | date: "long" }}</li>
+                <li>{{ fecha | date: "MMMM" }}</li>
+                <li>{{ fecha | date: "dd MMMM, yyyy" }}</li>
+            </ul>
+
+            <hr />
+            <ul>
+                <li>{{ fecha | date: "long":"GMT-7" }}</li>
+                <li>{{ fecha | date: "long":"GMT-5" }}</li>
+                <li>{{ fecha | date: "long":"":"en" }}</li>
+                <li>{{ fecha | date: "long":"":"fr" }}</li>
+            </ul>
+        </p-card>
+    </ng-template>
+</p-splitter>

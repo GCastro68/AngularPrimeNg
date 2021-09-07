@@ -1,0 +1,49 @@
+<div class="text-layout">
+    <h1>Decimal Pipe y Porcentaje</h1>
+    <p>Pipes Incluídos en Angular - Usualmente en el Common Module.</p>
+</div>
+
+<div class="grid">
+    <div class="p-col-4">
+        <p-card header="Ventas Netas" subheader="del presente año" [style]="{
+        width: '25rem',
+        'margin-top': '2em',
+        'margin-bottom': '2em',
+        'margin-right': '2em'
+      }">
+            <i class="pi pi-dollar"></i> {{ ventasNetas + 1000000 | number: "1.2-2" }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="Ventas Brutas" subheader="del presente año" [style]="{
+        width: '25rem',
+        'margin-top': '2em',
+        'margin-bottom': '2em',
+        'margin-right': '2em'
+      }">
+            {{ ventasNetas + 2000000 | currency: "":"symbol-narrow":"1.4-4" }}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="Ganancia Porcentual" subheader="del presente año" [style]="{
+        width: '25rem',
+        'margin-top': '2em',
+        'margin-bottom': '2em',
+        'margin-right': '2em'
+      }">
+            {{ porcentaje | percent: "2.2-2" }}
+        </p-card>
+    </div>
+</div>
+
+<!-- 
+
+<p-card header="Simple Card" [style]="{ width: '25rem', 'margin-bottom': '2em' }">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+    </p>
+</p-card>
+
+ -->
