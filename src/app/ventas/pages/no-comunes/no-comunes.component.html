@@ -44,4 +44,44 @@
             <pre>{{ clientes | slice: 0:clientes.length }}</pre>
         </p-fieldset>
     </div>
+
+    <div>
+        <p-fieldset legend="KeyValue Pipe" [toggleable]="true" [style]="{
+        width: '20rem',
+        'margin-top': '1em',
+        'margin-bottom': '2em',
+        'margin-right': '2em'
+      }">
+            <ul>
+                <li *ngFor="let item of persona | keyvalue">
+                    <b>{{ item.key | titlecase }}:</b> {{ item.value }}
+                </li>
+            </ul>
+        </p-fieldset>
+    </div>
+
+    <div>
+        <p-fieldset legend="Json Pipe" [toggleable]="true" [style]="{
+        width: '20rem',
+        'margin-top': '1em',
+        'margin-bottom': '2em',
+        'margin-right': '2em'
+      }">
+            <pre>{{ heroes | json }}</pre>
+        </p-fieldset>
+    </div>
+
+    <div>
+        <p-fieldset legend="Async Pipe" [toggleable]="true" [style]="{
+        width: '20rem',
+        'margin-top': '1em',
+        'margin-bottom': '2em',
+        'margin-right': '2em'
+      }">
+            <!-- <pre>{{ miObservable | async }}</pre> -->
+
+            <pre *ngIf="!(valorPromesa | async)">Resolviendo Promesa ...</pre>
+            <pre>{{ valorPromesa | async }}</pre>
+        </p-fieldset>
+    </div>
 </div>
